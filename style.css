@@ -37,7 +37,7 @@ a {
 	list-style: none;
 	text-decoration: none;
 }
-.nav-padding {
+nav {
 	padding-top: 2.5rem;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
@@ -49,23 +49,24 @@ a {
 .background {
 	position: absolute;
 	background-image: url('./images/bg-pattern-intro-mobile.svg');
-	inset: 0;
-	top: 2rem;
-	left: 5rem;
+	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
+	scale: 3.5;
+	top: 14rem;
+	left: 10rem;
 	z-index: -1;
+	width: 100%;
+	height: 300px;
 }
 
 .background-color {
 	position: relative;
-	background: linear-gradient(
-		to right,
-		hsl(13, 100%, 72%),
-		hsl(353, 100%, 62%)
-	);
+	background: linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
 	padding-bottom: 10rem;
 	border-bottom-left-radius: 6rem;
 	z-index: 0;
+	overflow: hidden;
 }
 
 nav {
@@ -96,14 +97,15 @@ header {
 	text-align: center;
 }
 header h1 {
-	font-size: 2.15rem;
+	font-size: clamp(2rem, 4vw, 3.75rem);
 	color: var(--clr-neutral-100);
 	font-family: var(--ff-overpass);
 }
 header p {
 	margin-top: 1rem;
 	margin-bottom: 2rem;
-	font-size: 1.1rem;
+	/* font-size: 1.1rem; */
+	font-size: clamp(1.1rem, 4vw, 1.25rem);
 	color: var(--clr-neutral-150);
 	font-family: var(--ff-overpass);
 }
@@ -152,12 +154,33 @@ header p {
 	.burger-open {
 		display: none;
 	}
-
 	.nav-container {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		margin-left: 4rem;
+	}
+	.background {
+		position: absolute;
+		background-image: url('./images/bg-pattern-intro-desktop.svg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		scale: 2.5;
+		top: -10rem;
+		left: 35%;
+		z-index: -1;
+		width: 100%;
+		height: 800px;
+	}
+	header p {
+		margin-bottom: 3rem;
+	}
+}
+@media (min-width: 1200px) {
+	nav {
+		padding-left: 10rem;
+		padding-right: 10rem;
 	}
 }
