@@ -14,6 +14,7 @@
 	--clr-primary-300: hsl(355, 100%, 74%);
 	--clr-neutral-900: hsl(240, 10%, 16%);
 	--clr-neutral-400: hsl(207, 13%, 34%);
+	--clr-neutral-300: hsl(204, 5%, 36%);
 	--clr-neutral-200: hsl(240, 2%, 79%);
 	--clr-neutral-150: hsla(0, 0%, 100%, 0.7);
 	--clr-neutral-100: hsl(0, 0%, 100%);
@@ -42,7 +43,12 @@ nav {
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 }
-.padding-l {
+.container {
+	text-align: center;
+	overflow: hidden;
+}
+
+.header-padding {
 	padding: 0 2rem;
 }
 
@@ -149,8 +155,50 @@ header p {
 	justify-content: center;
 	gap: 1rem;
 }
+.first-section {
+	padding-top: 7rem;
+}
+.first-section h2 {
+	font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+	font-family: var(--ff-overpass);
+	color: var(--clr-primary-700);
+	margin-bottom: 3.5rem;
+}
 
-@media (min-width: 48rem) {
+.first-section .section-container {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+.first-section .column {
+	flex: 0 0 100%;
+	padding: 0 2rem;
+}
+.first-section .column img {
+	scale: 1.25;
+	margin-top: 2rem;
+	margin-bottom: 5rem;
+	overflow: hidden;
+}
+.first-section h3 {
+	font-size: 1.75rem;
+	font-family: var(--ff-overpass);
+	font-weight: 700;
+	color: var(--clr-primary-700);
+	line-height: 2rem;
+	margin-bottom: 1rem;
+}
+.first-section .paragraph:nth-of-type(2) h3 {
+	margin-top: 3rem;
+}
+.first-section p {
+	font-size: 1.05rem;
+	font-family: var(--ff-overpass);
+	color: var(--clr-neutral-300);
+	line-height: 1.75rem;
+}
+
+@media (min-width: 62rem) {
 	.burger-open {
 		display: none;
 	}
@@ -177,10 +225,56 @@ header p {
 	header p {
 		margin-bottom: 3rem;
 	}
+	.first-section {
+		padding-top: 10rem;
+	}
+
+	.first-section .section-container {
+		flex-direction: row;
+		margin-left: 5rem;
+		gap: 5rem;
+	}
+	.first-section .column {
+		flex: 0 0 50%;
+		text-align: left;
+		padding: 0;
+	}
+	.first-section .column:first-of-type {
+		padding-right: 5rem;
+	}
+	.first-section h2 {
+		margin-bottom: 5rem;
+	}
+
+	.first-section h3 {
+		font-size: 1.75rem;
+		font-family: var(--ff-overpass);
+		font-weight: 700;
+		color: var(--clr-primary-700);
+		line-height: 2rem;
+		margin-bottom: 1.75rem;
+	}
+	.first-section .paragraph:nth-of-type(2) h3 {
+		margin-top: 5rem;
+	}
+
+	.first-section .column img {
+		scale: 1.35;
+		margin-bottom: 0;
+	}
 }
+
 @media (min-width: 1200px) {
 	nav {
 		padding-left: 10rem;
 		padding-right: 10rem;
+	}
+	.first-section .column:first-of-type {
+		padding-right: 10rem;
+	}
+}
+@media (min-width: 1400px) {
+	.first-section .section-container {
+		margin-left: 10rem;
 	}
 }
