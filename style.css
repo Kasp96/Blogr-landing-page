@@ -38,18 +38,9 @@ a {
 	list-style: none;
 	text-decoration: none;
 }
-nav {
-	padding-top: 2.5rem;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
-}
 .container {
 	text-align: center;
 	overflow: hidden;
-}
-
-.header-padding {
-	padding: 0 2rem;
 }
 
 .background {
@@ -66,7 +57,7 @@ nav {
 	height: 300px;
 }
 
-.background-color {
+.header-nav-bg {
 	position: relative;
 	background: linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
 	padding-bottom: 10rem;
@@ -74,17 +65,19 @@ nav {
 	z-index: 0;
 	overflow: hidden;
 }
-
-nav {
+.nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding-top: 2.5rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 }
-nav ul {
+.nav ul {
 	display: flex;
 	gap: 2rem;
 }
-nav ul li {
+.nav ul li {
 	display: inline-flex;
 	align-items: center;
 	gap: 0.5rem;
@@ -98,19 +91,18 @@ nav ul li {
 .burger-open {
 	cursor: pointer;
 }
-header {
+.header {
 	margin-top: 6rem;
-	text-align: center;
+	padding: 0 2rem;
 }
-header h1 {
+.header h1 {
 	font-size: clamp(2rem, 4vw, 3.75rem);
 	color: var(--clr-neutral-100);
 	font-family: var(--ff-overpass);
 }
-header p {
+.header p {
 	margin-top: 1rem;
 	margin-bottom: 2rem;
-	/* font-size: 1.1rem; */
 	font-size: clamp(1.1rem, 4vw, 1.25rem);
 	color: var(--clr-neutral-150);
 	font-family: var(--ff-overpass);
@@ -150,10 +142,8 @@ header p {
 	background-color: var(--clr-neutral-100);
 	color: var(--clr-primary-300);
 }
-.btns {
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
+.btns button:not(:last-child) {
+	margin-right: 0.5rem;
 }
 .first-section {
 	padding-top: 7rem;
@@ -165,13 +155,14 @@ header p {
 	margin-bottom: 3.5rem;
 }
 
-.first-section .section-container {
+.first-section .columns {
 	display: flex;
 	flex-direction: column-reverse;
 	align-items: center;
 }
 .first-section .column,
-.second-section .column {
+.second-section .column,
+.third-section .column {
 	flex: 0 0 100%;
 	padding: 0 2rem;
 }
@@ -181,18 +172,21 @@ header p {
 	margin-bottom: 5rem;
 	overflow: hidden;
 }
-.first-section h3 {
+.first-section h3,
+.third-section h3 {
 	font-size: 1.75rem;
 	font-family: var(--ff-overpass);
 	font-weight: 700;
 	color: var(--clr-primary-700);
 	line-height: 2rem;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 }
-.first-section .paragraph:nth-of-type(2) h3 {
+.first-section .paragraph:nth-of-type(2) h3,
+.third-section .paragraph:nth-of-type(2) h3 {
 	margin-top: 3rem;
 }
-.first-section p {
+.first-section p,
+.third-section p {
 	font-size: 1.05rem;
 	font-family: var(--ff-overpass);
 	color: var(--clr-neutral-300);
@@ -200,10 +194,10 @@ header p {
 }
 .second-section {
 	position: relative;
-	padding-top: 7.5rem;
+	padding-top: 6rem;
 	padding-bottom: 5rem;
 }
-.second-section .section-container {
+.second-section .columns {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -216,7 +210,7 @@ header p {
 	background: linear-gradient(180deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
 	inset: 15rem 0 0 0;
 	width: 100%;
-	height: 100%;
+	height: 75%;
 	border-top-right-radius: 5rem;
 	border-bottom-left-radius: 5rem;
 	z-index: -1;
@@ -251,6 +245,18 @@ header p {
 .second-section .column img {
 	scale: 1.15;
 }
+.third-section {
+	padding-top: 10rem;
+}
+.third-section .columns {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.third-section .column img {
+	scale: 1.6;
+	margin-bottom: 7rem;
+}
 
 @media (min-width: 62rem) {
 	.burger-open {
@@ -276,20 +282,21 @@ header p {
 		width: 100%;
 		height: 800px;
 	}
-	header p {
+	.header p {
 		margin-bottom: 3rem;
 	}
 	.first-section {
 		padding-top: 10rem;
 	}
 
-	.first-section .section-container {
+	.first-section .columns {
 		flex-direction: row;
 		margin-left: 5rem;
 		gap: 5rem;
 	}
 	.first-section .column,
-	.second-section .column {
+	.second-section .column,
+	.third-section .column {
 		flex: 0 0 50%;
 		text-align: left;
 		padding: 0;
@@ -309,7 +316,8 @@ header p {
 		line-height: 2rem;
 		margin-bottom: 1.75rem;
 	}
-	.first-section .paragraph:nth-of-type(2) h3 {
+	.first-section .paragraph:nth-of-type(2) h3,
+	.third-section .paragraph:nth-of-type(2) h3 {
 		margin-top: 5rem;
 	}
 
@@ -317,7 +325,7 @@ header p {
 		scale: 1.35;
 		margin-bottom: 0;
 	}
-	.second-section .section-container {
+	.second-section .columns {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -344,9 +352,24 @@ header p {
 	.second-section .column .paragraph {
 		margin-right: 5rem;
 	}
-
+	.third-section {
+		padding-top: 4rem;
+	}
 	.second-section .column img {
 		scale: 1;
+	}
+	.third-section .columns {
+		flex-direction: row;
+		margin-right: 10rem;
+		gap: 5rem;
+	}
+	.third-section .column img {
+		scale: 1.5;
+		margin-bottom: 0;
+	}
+
+	.third-section .column:last-of-type {
+		padding-left: 5rem;
 	}
 }
 
@@ -361,12 +384,30 @@ header p {
 	.second-section .column .paragraph {
 		margin-right: 10.75rem;
 	}
+
+	.third-section .columns {
+		gap: 10rem;
+	}
+
+	.third-section .column:first-of-type {
+		margin-left: -6rem;
+	}
+
+	.third-section .column:last-of-type {
+		padding-right: 2.5rem;
+	}
 }
 @media (min-width: 87.5rem) {
-	.first-section .section-container {
+	.first-section .columns {
 		margin-left: 10rem;
 	}
 	.second-section .column img {
 		margin-left: 7.5rem;
+	}
+	.third-section .columns {
+		margin-right: 10rem;
+	}
+	.third-section .column:last-of-type {
+		padding-right: 10rem;
 	}
 }
