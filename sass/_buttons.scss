@@ -1,0 +1,80 @@
+.button {
+	width: 130px;
+	padding: 13px 0;
+	font-size: 1.15rem;
+	font-family: var(--ff-overpass);
+	font-weight: 600;
+	background: linear-gradient(
+		to right,
+		hsl(13, 100%, 72%),
+		hsl(353, 100%, 62%)
+	);
+	color: var(--clr-neutral-100);
+	border: none;
+	border-radius: 25px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.button-start {
+	font-size: 1rem;
+	background: var(--clr-neutral-100);
+	color: var(--clr-primary-400);
+	font-family: var(--ff-overpass);
+	font-weight: 600;
+}
+.login {
+	font-size: 1.15rem;
+	font-weight: 600;
+	color: var(--clr-neutral-900);
+	font-family: var(--ff-overpass);
+	background-color: transparent;
+}
+
+.button:hover {
+	background-color: var(--clr-primary-300);
+	color: var(--clr-neutral-100);
+}
+
+.button-reverse {
+	font-size: 1rem;
+	border: 1px solid var(--clr-neutral-100);
+	background: transparent;
+	color: var(--clr-neutral-100);
+}
+
+.button-reverse:hover {
+	background-color: var(--clr-neutral-100);
+	color: var(--clr-primary-300);
+}
+
+.btns {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+@media (min-width: 62rem) {
+	.button {
+		font-size: 1rem;
+		background: var(--clr-neutral-100);
+		color: var(--clr-primary-300);
+	}
+	.registration {
+		flex-direction: row;
+		padding: 0;
+		border: none;
+		width: auto;
+		margin-inline: 0;
+	}
+
+	.login {
+		font-size: 1rem;
+		color: var(--clr-neutral-100);
+	}
+
+	.button-reverse {
+		font-size: 1rem;
+		border: 1px solid var(--clr-neutral-100);
+		background: transparent;
+		color: var(--clr-neutral-100);
+	}
+}

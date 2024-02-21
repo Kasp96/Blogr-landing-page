@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--ff-overpass: 'Overpass', sans-serif;
+	--ff-ubuntu: 'Ubuntu', sans-serif;
+	--clr-primary-700: hsl(208, 49%, 24%);
+	--clr-primary-400: hsl(356, 100%, 66%);
+	--clr-primary-300: hsl(355, 100%, 74%);
+	--clr-neutral-900: hsl(240, 10%, 16%);
+	--clr-neutral-400: hsl(207, 13%, 34%);
+	--clr-neutral-300: hsl(204, 5%, 36%);
+	--clr-neutral-250: hsl(0, 11%, 93%);
+	--clr-neutral-200: hsl(240, 2%, 79%);
+	--clr-neutral-150: hsla(0, 0%, 100%, 0.7);
+	--clr-neutral-100: hsl(0, 0%, 100%);
+	--clr-gradient-1: hsl(13, 100%, 72%);
+	--clr-gradient-2: hsl(353, 100%, 62%);
+	--clr-gradient-3: hsl(237, 17%, 21%);
+	--clr-gradient-4: hsl(237, 23%, 32%);
+}
+
+body {
+	font-family: 'Overpass', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+img,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+ul,
+a {
+	list-style: none;
+	text-decoration: none;
+}
