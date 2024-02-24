@@ -34,6 +34,15 @@
 	}
 }
 
+@media (min-width: 576px) and (max-width: 991px) {
+	.nav-2 {
+		ul {
+			display: flex;
+			gap: 1rem;
+		}
+	}
+}
+
 @media (min-width: 62rem) {
 	.footer {
 		margin-top: 15rem;

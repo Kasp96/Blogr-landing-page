@@ -17,6 +17,7 @@
 		display: flex;
 		flex-direction: column-reverse;
 		align-items: center;
+		z-index: -1;
 	}
 	.column {
 		@include columnMobile;
@@ -26,7 +27,6 @@
 			margin-top: 2rem;
 			margin-bottom: 5rem;
 			overflow: hidden;
-			z-index: -1;
 		}
 		h3 {
 			@include h3;
@@ -45,6 +45,7 @@
 	position: relative;
 	padding-top: 6rem;
 	padding-bottom: 5rem;
+	z-index: -9999;
 	.background-2 {
 		@include background2;
 	}

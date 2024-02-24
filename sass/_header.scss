@@ -57,13 +57,15 @@
 	position: fixed;
 	width: 85vw;
 	max-width: 30rem;
+	max-height: 600px;
 	background: var(--clr-neutral-100);
 	top: 7rem;
 	left: 50%;
 	transform: translateX(500px);
-	z-index: 100000;
 	border-radius: 7px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	z-index: 9999;
+	overflow: auto;
 }
 .submenu {
 	width: 90%;
@@ -130,9 +132,7 @@
 .rotate {
 	rotate: 180deg;
 }
-.stop-scroll {
-	overflow: hidden;
-}
+
 .sub-show {
 	padding: 1.5rem 0;
 	max-height: 180px;
@@ -159,11 +159,19 @@
 		margin-left: 4rem;
 		background: transparent;
 		box-shadow: none;
+		overflow: unset;
 	}
+	.li-item-1,
+	.li-item-2,
+	.li-item-3 {
+		position: relative;
+	}
+
 	.submenu {
 		position: absolute;
 		top: 100%;
-		width: 10rem;
+		width: min-content;
+		padding-right: 3rem;
 	}
 	.submenu p {
 		padding-left: 1.5rem;
@@ -174,11 +182,10 @@
 		left: 0;
 	}
 	.submenu-2 {
-		top: 100%;
-		left: 13%;
+		left: 6.75rem;
 	}
 	.submenu-3 {
-		left: 24%;
+		left: 14.25rem;
 	}
 	.nav ul {
 		gap: 2rem;
